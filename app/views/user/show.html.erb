@@ -1,0 +1,33 @@
+<div class="mega container d-flex h-100 w-100 justify-content-center align-items-center">
+<div class="container">
+    <div class="span3">
+        <center>
+
+    <!-- Modal -->
+
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-end">
+                    <h4 class="modal-title" id="myModalLabel">Utilisateur</h4>
+                    </div>
+                <div class="modal-body">
+                    <center>
+                    <h3 class="media-heading"> <%= User.find(params[:id]).first_name %> <%= User.find(params[:id]).last_name %> <small><%= User.find(params[:id]).city.name %></small></h3>
+                    </center>
+                    <hr>
+                    <center>
+                    <p><strong>Decprition: </strong><br>
+                        <%= User.find(params[:id]).description %></p>
+                    <br>
+                    <p>Email : <%= User.find(params[:id]).email %> </p>
+                    <p>Age : <%= User.find(params[:id]).age %> </p>
+                    <p></p>
+                    </center>
+                </div>
+                <div class="modal-footer">
+                    <center>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Les postes de <%= User.find(params[:id]).first_name %> </button>
+                    </center>
+                </div>
+            </div>
+        </div>
+         </div>
